@@ -1,0 +1,463 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family:'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.app {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========
+  Navbar
+========== */
+
+.app nav {
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+
+.app nav > h1 {
+  margin: 0;
+  padding: 1em;
+}
+
+.app nav > .links {
+  position: fixed;
+  left: 5%;
+  right: 5%;
+  bottom: 8%;
+  background: #52525b;
+  color: #FFF;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px 2px rgba(55, 55, 55, 0.25);
+  border-radius: 12px;
+  transition: 250ms;
+}
+
+.app nav > .links > a {
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 1px;
+}
+
+/* ==========
+  Main
+========== */
+
+.app main {
+  flex: 1 1 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em;
+}
+
+/* About Section */
+
+.app main .about {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app main .about > img {
+  width: 250px;
+}
+
+.app main .about > .descriptions > h1 {
+  text-align: center;
+}
+
+.app main .about > .descriptions > p {
+  line-height: 150%;
+}
+
+.app main .about > .descriptions > .skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.app main .about > .descriptions > .skills > h2 {
+  margin: 2rem 0 0.5rem 0;
+}
+
+/* Projects Section */
+
+.app main .projects {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.app main .projects > h1 {
+  text-align: center;
+}
+
+.app main .projects > .projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.app main .projects > .projects-container > .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app main .projects > .projects-container > .project > img {
+  width: 300px;
+}
+.app main .projects > .projects-container > .project > span {
+  font-size: 1rem;
+}
+
+/* Contact Section */
+
+.app main .contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+  margin: 2em;
+  margin-bottom: 0;
+}
+
+.app main .contacts > h2 {
+  margin: 0;
+}
+
+.app main .contacts > .contact-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5em;
+}
+
+.app main .contacts > .contact-card > input {
+  padding: 1em;
+  border: 2px solid #CCC7DD;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.app main .contacts > .contact-card > textarea {
+  min-height: 200px;
+  border: 2px solid #CCC7DD;
+  border-radius: 6px;
+  font-family: inherit;
+  padding: 1em;
+}
+
+.app main .contacts > .contact-card > button {
+  padding: 1em;
+  font-family: inherit;
+  align-self: flex-start;
+  border: 2px solid #CCC7DD;
+  background: none;
+  border-radius: 6px;
+}
+
+.app main .contacts > .contact-card > button:active,
+.app main .contacts > .contact-card > textarea:active,
+.app main .contacts > .contact-card > input:active {
+  border-color: #000;
+}
+
+/* ==========
+  Footer
+========== */
+
+.app footer {
+  flex: 0 1 40px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 2em;
+  margin-top: 0;
+}
+
+.app footer > .sc-container {
+  display: flex;
+  align-items: center;
+  gap: 5em;
+  padding: 0.5em 1em;
+}
+
+.app footer > .sc-container > span {
+  position: relative;
+}
+
+.app footer > .sc-container > span::after {
+  position: absolute;
+  content: '';
+  width: 75%;
+  height: 2px;
+  right: -1;
+  top: 50%;
+  bottom: 50%;
+  border-radius: 1rem;
+  background: #000;
+  margin-left: 1rem;
+}
+
+.app footer > .sc-container > .sc-logos {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.app footer > .sc-container > .sc-logos > img {
+  width: 1rem;
+}
+
+.app footer > .sc-container > .sc-logos > span {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  /* About Section */
+  .app main .about > .descriptions > .skills {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 0;
+    padding: 2em 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .app main .about > .descriptions > .skills > h2 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 700px) {
+  /* Nav Section */
+  .app nav {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  .app nav > h1 {
+    margin: 0;
+    padding: 1em;
+  }
+
+  .app nav > .links {
+    position: static;
+    left: unset;
+    right: unset;
+    bottom: unset;
+    background: none;
+    color: inherit;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+    box-shadow: unset;
+    border-radius: unset;
+    transition: 0s;
+    padding: 1em;
+  }
+
+  /* Contact Section */
+  .app main .contacts {
+    margin-bottom: 2em;
+  }
+
+    /* ==========
+    Footer
+  ========== */
+
+  .app footer {
+    margin: 0;
+  }
+
+  .app footer > .sc-container {
+    border-radius: 6px; 
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    background: white;
+    box-shadow: 0 8px 15px 2px rgba(150, 150, 150, 0.25);
+    transition: 500ms;
+  }
+
+  .app footer > .sc-container:hover {
+    transform: scale(1.02);
+    transition: 250ms;
+    box-shadow: 0 8px 15px 2px rgba(150, 150, 150, 0.5);
+    cursor: pointer;
+  }
+  
+  .app footer > .sc-container > span::after {
+    position: absolute;
+    content: '';
+    width: 75%;
+    height: 2px;
+    right: -1;
+    top: 50%;
+    bottom: 50%;
+    border-radius: 1rem;
+    background: #000;
+    margin-left: 1rem;
+  }
+
+  .app footer > .sc-container > .sc-logos > span {
+    display: inline;
+  }
+}
+
+@media (min-width: 800px) {
+  /* Projects Section */
+  .app main .projects > .projects-container {
+    flex-direction: row;
+    padding: 0 0 1em;
+  }
+
+  .app main .projects > .projects-container > .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .app main .projects > .projects-container > .project > img {
+    width: 200px;
+  }
+  .app main .projects > .projects-container > .active > img {
+    width: 300px;
+  }
+  .app main .projects > .projects-container > .active > span {
+    font-size: 1.25rem;
+  }
+
+  /* Contact Section */
+  .app main .contacts {
+    max-width: 600px;
+    margin: auto auto;
+  }
+}
+
+@media (min-width: 980px) {
+  .app {
+    padding: 2em;
+  }
+
+  .contents {
+    overflow-y: hidden;
+    height: 60vh;
+    scroll-behavior: smooth;
+  }
+
+  .contents > .container {
+    max-width: 1200px;
+  }
+
+  /* About Section */
+  .contents > .container .about {
+    flex-direction: row;
+    gap: 2em;
+    margin: 0;
+  }
+
+  .contents > .container .about > img {
+    flex: 1;
+    width: 500px;
+  }
+
+  .contents > .container .about > .descriptions {
+    justify-content: flex-start;
+    padding: 0 1em;
+  }
+
+  .contents > .container .about > .descriptions > h1 {
+    font-size: 3rem;
+    text-align: unset;
+  }
+  
+  .contents > .container .about > .descriptions > p {
+    line-height: 150%;
+    font-size: 0.9rem;
+  }
+  
+  .contents > .container .about > .descriptions > .skills {
+    border: none;
+    margin: 0;
+  }
+  
+  .contents > .container .about > .descriptions > .skills > h2 {
+    margin: 0;
+  }
+
+  /* Project Section */
+  .contents > .container .projects > h1 {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+
+  .contents > .container .projects > .projects-container > .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contents > .container .projects > .projects-container > .project > img {
+    width: 250px;
+  }
+  .contents > .container .projects > .projects-container > .active > img {
+    width: 400px;
+  }
+
+  /* Contacts Section */
+  .contents > .container .contacts {
+    width: 700px;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .contents > .container .contacts > h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .app {
+    max-width: 1500px;
+    padding: 4em;
+    margin: auto auto;
+  }
+
+  .app main {
+    padding: 0;
+  }
+
+  .app nav {
+    padding: 0;
+  }
+
+  .app footer > .sc-container {
+    position: static;
+  }
+}

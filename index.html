@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app">
+      <nav>
+        <h1 class="logo">Neo Franco</h1>
+        <div class="links">
+          <a href="#about">about</a>
+          <a href="#projects">projects</a>
+          <a href="#contacts">contacts</a>
+        </div>
+      </nav>
+      <main>
+        <div class="contents">
+          <div class="container">
+            <a name="about" class="about">
+              <img src="./assets/cover.png" alt="user's avatar"/>
+              <div class="descriptions">
+                <h1>about me</h1>
+                <p>Proin purus purus eleifend mauris sed. Egestas tempor turpis faucibus a fusce. Libero sed ipsum quam ac. In id et massa leo mattis id donec. Congue facilisi amet, sit felis, mauris eu. Fames dignissim quam etiam felis facilisis enim. Aliquam tortor vitae elit vivamus tortor. Lectus suscipit aenean faucibus ultrices fames mauris. Justo elementum nulla egestas purus facilisi tortor sed tellus.</p>
+                <p>Gravida et, sed amet in facilisis fringilla tempus sit volutpat. Iaculis ullamcorper commodo diam donec pharetra gravida. Pharetra gravida pellentesque urna, amet platea venenatis eget fames velit.</p>
+                <div class="skills">
+                  <h2>skills</h2>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>React</span>
+                  <span>SCSS</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="container">
+            <a name="projects" class="projects">
+              <h1>featured works</h1>
+              <div class="projects-container">
+                <div class="project">
+                  <img src="./assets/icon.png" alt=""/>
+                  <span>Project Name</span>
+                </div>
+                <div class="project active">
+                  <img src="./assets/icon.png" alt=""/>
+                  <span>Project Name</span>
+                </div>
+                <div class="project">
+                  <img src="./assets/icon.png" alt=""/>
+                  <span>Project Name</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="container">
+            <a name="contacts" class="contacts">
+              <h1>get in touch</h1>
+              <form action="https://getform.io/f/8395b9a9-85d7-4767-a007-ab94acd3b1c4" class="contact-card" id="form" method="POST" autocomplete="off">
+                <input type="text" name="name" placeholder="Name" required/>
+                <input type="email" name="email" placeholder="Email address" required/>
+                <input type="text" name="subject" placeholder="Subject" required/>
+                <textarea name="message" maxlength="250" placeholder="Your message" required></textarea>
+                <button type="submit">Send message</button>
+              </form> 
+            </a>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="sc-container">
+          <span>connect</span>
+          <div class="sc-logos">
+            <img src="./assets/linkedin-logo.svg" alt="logo" />
+            <span>LinkedIn</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
